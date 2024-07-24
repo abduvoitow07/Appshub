@@ -1,0 +1,371 @@
+/* ========  Abduvoitov Doniyor ======== 
+======== Tel: (90) 400 33 01 ========
+======== Instagram: @abduvoitow ========
+======== Email: abduvoitow@gmail.com ======== */
+
+
+:root {
+    --light-grey: #f5f5f5;
+    --light: #ffffff;
+    --orange: #f7971d;
+    --dark: #000000;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tahoma';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+button {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.header {
+    justify-content: space-between;
+    display: flex;  
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    font-size: 15pt;
+    background-color: var(--light-grey);
+    z-index: 999;
+}
+
+.title {
+    color: var(--orange);
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--dark);
+    font-size: 11pt;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid var(--orange);
+}
+
+li.active a {
+    color: var(--orange);
+}
+
+.menu {
+    transition: .5s;
+}
+
+.swiper {
+    width: 70%;
+    margin-top: 6rem;
+}
+.swiper-button-next, .swiper-button-prev{
+    color: var(--orange);
+}
+.swiper-slide img {
+    width: 100%;
+    border-radius: 10px;
+    height: 320px;
+}
+
+.list__harga {
+    color: var(--dark);
+}
+
+.title-p,
+.title-v,
+.title-s {
+    margin-top: 2rem;
+    margin-bottom: 10px;
+}
+
+.populer{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.app-logo {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.link a {
+    color: var(--dark);
+}
+
+.link a:hover {
+    color: var(--orange);
+    transition-duration: .3s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: var(--dark);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: var(--orange);
+}
+
+.content {
+    width: 100%;
+}
+
+.harga {
+    color: var(--orange);
+}
+
+.download {
+    color: var(--light-grey);
+    background-color: var(--orange);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.download:hover {
+    color: var(--orange);
+    background-color: var(--light-grey);
+    transition: ease-in .3s;
+}
+
+.download img {
+    margin-top: 30px;
+    width: 20px;
+}
+
+.card {
+    background-color: var(--light-grey);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    justify-content: center;
+    background-color: var(--light-grey);
+    margin-top: 10%;
+    padding: 2%;
+    text-align: center;
+}
+
+.sosmed img {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-grey);
+    font-weight: bold;
+}
+abduvoitow a{
+    color: var(--orange);
+}
+
+/* Responsive */
+@media screen and (max-width:640px) {
+    .container {
+        max-width: 640px;
+        padding: 1rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    button {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--light-grey);
+        padding: 2rem;
+        width: 15rem;
+        height: 10rem;
+        border-radius: 10px;
+    }
+
+    .hamburger-menu {
+        border: none;
+        background-color: transparent;
+        position: relative;
+        z-index: 999;
+    }
+
+    .hamburger-menu:hover {
+        cursor: pointer;
+    }
+
+    .hamburger-menu>span:nth-child(1) {
+        width: 25px;
+        height: 2px;
+        background: var(--dark);
+        display: block;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .hamburger-menu>span:nth-child(2) {
+        width: 15px;
+        height: 2px;
+        background-color: var(--orange);
+        display: block;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .hamburger-menu>span:nth-child(3) {
+        width: 25px;
+        height: 2px;
+        background: var(--dark);
+        display: block;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .hamburger-active>span {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-active>span:nth-child(2) {
+        display: none;
+    }
+
+
+    .swiper {
+        width: 90%;
+    }
+    .swiper img{
+       height: 130px;
+    }
+    .populer,
+    .streaming,
+    .voucher {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        font-weight: bold;
+    }
+
+    .popup {
+        width: 90%;
+    }
+
+    .copyright {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sosmed {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+/* ========  Abduvoitov Doniyor ======== 
+======== Tel: (90) 400 33 01 ========
+======== Instagram: @abduvoitow ========
+======== Email: abduvoitow@gmail.com ======== */

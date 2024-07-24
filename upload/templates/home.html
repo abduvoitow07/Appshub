@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ block.super }} | Apps {% endblock title %}
+
+{% block content %}
+
+<!-- image slider -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="#">
+                <img src="https://www.atomic-energy.ru/files/styles/first_foto/public/images/2024/05/23423523.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#">
+                <img src="https://www.telecomasia.net/upload/sprint.editor/f01/f01b25abe47e86469c3708ca1d07acd1.png" alt=""/>
+            </a>
+        </div>
+    </div>
+    <style>
+        .swiper-pagination-bullet {
+          background-color: #f7971d;
+        }
+    </style>
+    <div class="swiper-pagination"></div>
+    <div style="color: #f7971d;" class="swiper-button-prev"></div>
+    <div style="color: #f7971d;" class="swiper-button-next"></div>
+</div>
+  <!-- end image slider -->
+
+
+
+  <main class="container">
+
+    <h1 class="title-p">POPULER APPS</h1>
+
+    <section id="populer" class="populer">
+      <!-- ======= Open Apps-Card ======= --> 
+      {% for application in applications %}
+      <div>
+        <div class="link">
+          <a href="#{{ application.app }}">
+            <img class="app-logo" src="{{ application.logo.url }}" alt="">
+            <div class="judul-produk">{{ application.app }}</div>
+          </a>
+        </div>
+        <div class="overlay" id="{{ application.app }}">
+          <div class="popup">
+            <h2>{{ application.app }}</h2>
+            <a class="close" href="#">&times;</a>
+            <br />
+            <div class="content">
+              <p>Version {{ application.version }}</p>
+              <p>Size {{ application.size }}</p>
+              <br><br>
+              <a class="download" href="{{ application.file.url }}">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <!------- End Apps-Card -------->
+    </section>
+
+  </main>
+
+{% endblock content %}
