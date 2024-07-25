@@ -25,7 +25,7 @@ SECRET_KEY = '71d01oie@ts2^55(b8onk@sqj#73bzzzct07mo(p4+n%pq&ha4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://appshub.vercel.app/"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'upload',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +124,3 @@ STATIC_DIRS = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
